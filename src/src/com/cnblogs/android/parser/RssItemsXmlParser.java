@@ -107,7 +107,8 @@ public class RssItemsXmlParser extends DefaultHandler {
     		}else if(localName.equalsIgnoreCase(ENTRY_ICON_TAG)){//图片
     			entity.SetLink(chars);
     		}else if(localName.equalsIgnoreCase(ENTRY_DESCRIPTION_TAG)){//简介
-    			chars=StringEscapeUtils.unescapeHtml(chars);//进行编码处理，避免出现&gt;这种html
+    			//chars=StringEscapeUtils.unescapeHtml(chars);//进行编码处理，避免出现&gt;这种html
+    			chars=AppUtil.HtmlToText(chars);
     			entity.SetDescription(chars);
     		}else if(localName.equalsIgnoreCase(ENTRY_DESCRIPTION_TAG2)){//简介 && (entity.GetDescription()==null || entity.GetDescription().equals(""))
     			entity.SetDescription(chars);

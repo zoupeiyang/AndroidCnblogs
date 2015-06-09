@@ -103,14 +103,16 @@ public class RssListXmlParser extends DefaultHandler {
 			// 处理
 			if (localName.equalsIgnoreCase(ENTRY_TITLE_TAG)) {// 标题
 				try {
-					chars = StringEscapeUtils.unescapeHtml(chars);// 进行编码处理，避免出现&gt;这种html
+//					chars = StringEscapeUtils.unescapeHtml(chars);// 进行编码处理，避免出现&gt;这种html
+					chars=AppUtil.HtmlToText(chars);
 				} catch (Exception ex) {
 					Log.e("rssXml", "__________解析出错_____________");
 				}
 				entity.SetTitle(chars);
 			} else if (localName.equalsIgnoreCase(ENTRY_SUMMARY_TAG)) {// 摘要
 				try {
-					chars = StringEscapeUtils.unescapeHtml(chars);// 进行编码处理，避免出现&gt;这种html
+//					chars = StringEscapeUtils.unescapeHtml(chars);// 进行编码处理，避免出现&gt;这种html
+					chars=AppUtil.HtmlToText(chars);
 				} catch (Exception ex) {
 					Log.e("rssXml", "__________解析出错_____________");
 				}

@@ -106,7 +106,8 @@ public class CommentListXmlParser extends DefaultHandler {
 			Log.i("Comment", "正在解析" + localName);
 			// 处理
 			if (localName.equalsIgnoreCase(ENTRY_CONTENT)) {// 内容
-				chars = StringEscapeUtils.unescapeHtml(chars);// 进行编码处理，避免出现&gt;这种html
+				//chars = StringEscapeUtils.unescapeHtml(chars);// 进行编码处理，避免出现&gt;这种html
+				chars=AppUtil.HtmlToText(chars);
 				// 处理回复：@
 				chars = CommentHelper.FormatCommentString(chars);
 				entity.SetContent(chars);
