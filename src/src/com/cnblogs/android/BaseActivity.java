@@ -18,9 +18,9 @@ public class BaseActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		if (!SettingActivity.getIsAutoHorizontal(this))
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//如果用户没有启用自动横竖屏，则用户竖屏显示
 		else
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);//否则根据用户的设定来显示屏幕的横竖
 	}
 	protected void onPause() {
 		super.onPause();
