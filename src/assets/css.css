@@ -1,12 +1,12 @@
 body{font-family:Helvetica,"Microsoft Yahei",Verdana,Helvetica,SimSun,Arial,"Arial Unicode MS",MingLiu,PMingLiu,"MS Gothic",sans-serief;margin:0;padding:0 8px;background-color:#efeff0;color:#333;word-wrap:break-word;}
 p{margin-top:0;margin-bottom:5pt;line-height: 1.6em;}  
 #header{text-align:center;background:transparent url('webBgLine.png') repeat-x scroll center bottom; padding-top:6pt;margin-bottom:5pt;-webkit-background-size:320px 2px;}
-#header h3{margin-bottom:0px; margin-top:5px;font-size:16pt;padding:0 5pt;color:#464646;line-height:1.3em;}
-.date{color:#8e8e8e;font-size:12pt;padding:8pt 0;}
-#content{ font-size:14pt;line-height:1.8;}
+#header h3{margin-bottom:0px; margin-top:5px;font-size:10pt;padding:0 5pt;color:#464646;line-height:1.3em;}
+.date{color:#8e8e8e;font-size:8pt;padding:8pt 0;}
+#content{ font-size:8pt;line-height:1.8;}
 img{max-width:310px;height:auto;}
 div.bimg{text-align:center;padding:0;}
-.photo_title{font-weight:bold;font-size:16pt;margin-top:15px;}
+.photo_title{font-weight:bold;font-size:10pt;margin-top:15px;}
 .langs_cn{color:#006200;}
 audio{width:100%}
 *{-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */

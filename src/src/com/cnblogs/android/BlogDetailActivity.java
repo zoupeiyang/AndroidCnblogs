@@ -168,11 +168,12 @@ public class BlogDetailActivity extends BaseActivity
 			});
 			int scalePercent = 110;
 			// 上一次保存的缩放比例
-			float webviewScale = sharePreferencesSettings.getFloat(
-					res.getString(R.string.preferences_webview_zoom_scale),
-					(float) 1.1);
-			scalePercent = (int) (webviewScale * 100);
-			webView.setInitialScale(scalePercent);
+//			float webviewScale = sharePreferencesSettings.getFloat(
+//					res.getString(R.string.preferences_webview_zoom_scale),
+//					(float) 1.0);
+//			scalePercent = (int) (webviewScale * 100);
+			//webView.setInitialScale(scalePercent);
+			webView.setInitialScale(0);//默认原比例显示
 
 			blogBody_progressBar = (ProgressBar) findViewById(R.id.blogBody_progressBar);
 

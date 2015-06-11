@@ -99,8 +99,8 @@
 	<string name="config_read_mode_update_text">阅读模式已更改，将在下次启动时生效</string>
 	<string name="config_clear_cache_succ">缓存文件已经清空完成</string>
 		
-	<!--以下用于存放SharedPreferences的Key-->
 	<string name="preferences_key">currentTab</string>
+	<!--以下用于存放SharedPreferences的Key-->
 	<!--启动tab-->
 	<string name="preferences_current_tab">cnblogs_start_tab</string>
 	<!--是否全屏-->
