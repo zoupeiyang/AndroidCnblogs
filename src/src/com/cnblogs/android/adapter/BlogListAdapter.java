@@ -37,6 +37,8 @@ public class BlogListAdapter extends BaseAdapter {
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
+	//http://blog.csdn.net/pkxiuluo01/article/details/7380974 对getView要有深入的理解 这种方式是一种优化呈现列表的方式
+	//http://www.cnblogs.com/xiaowenji/archive/2010/12/08/1900579.html
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder viewHolder = null;
 		Blog entity = list.get(position);
@@ -80,6 +82,7 @@ public class BlogListAdapter extends BaseAdapter {
 			}
 	
 			viewHolder.imageIcon.setTag(tag);
+			//异步加载图片
 			Drawable cachedImage = asyncImageLoader.loadDrawable(
 					ImageCacher.EnumImageType.Avatar, tag, new ImageCallback() {
 						public void imageLoaded(Drawable imageDrawable, String tag) {
@@ -100,12 +103,15 @@ public class BlogListAdapter extends BaseAdapter {
 					});
 			// 阅读模式
 			boolean isPicReadMode = SettingActivity.IsPicReadMode(currentContext);
+			//如果是图文列表模式
 			if (isPicReadMode) {
 				viewHolder.imageIcon.setImageResource(R.drawable.sample_face);
 				if (cachedImage != null) {
 					viewHolder.imageIcon.setImageDrawable(cachedImage);
 				}
-			} else {
+			} 
+			else//文字模式
+			{
 				viewHolder.imageIcon.setVisibility(View.GONE);
 			}
 		}
